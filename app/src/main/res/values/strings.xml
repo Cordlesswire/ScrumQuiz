@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">Scrum Quizz</string>
+    <string name="app_name">Scrum Quiz</string>
+    <string name="scrum_image">scrum_image</string>
+    <string name="scrum_quiz_title">Scrum Quiz</string>
+    <string name="short_description">This is a short quiz about the Agile framework Scrum. Do you know all answers? Try yourself.</string>
+    <string name="image_copyright">Image: wibas GmbH ©</string>
+    <string name="agile_manifesto">Agile Manifesto</string>
+    <string name="question_1">Scrum is an Agile framework and, as such, is consistent with the values of the Agile Manifesto. Which of the following two statements is the right one?</string>
+    <string name="question_1_radio_button_1">Following a plan over responding to change</string>
+    <string name="question_1_radio_button_2">Responding to change over following a plan</string>
+    <string name="sprint_backlog">Sprint Backlog</string>
+    <string name="question_2">The self-organized team has a clear idea of what will define a piece of work as being completed , ensuring that everyone on the team knows exactly what is expected of everything the team delivers. This is called the</string>
+    <string name="question_2_part2">Definition of …</string>
+    <string name="question_2_answer_hint">…</string>
+    <string name="scrum_roles">Scrum Roles</string>
+    <string name="question_3">Which roles are Scrum roles?</string>
+    <string name="question_3_checkbox_1">Project Manager</string>
+    <string name="question_3_checkbox_2">Product Owner</string>
+    <string name="question_3_checkbox_3">Scrum Team</string>
+    <string name="question_3_checkbox_4">Marketing Manager</string>
+    <string name="question_3_checkbox_5">ScrumMaster</string>
+    <string name="question_3_checkbox_6">Team Leader</string>
+    <string name="scrum_values">Scrum Values</string>
+    <string name="question_4">All work performed in Scrum needs a set of values as the foundation for the team\'s processes and interactions. How many Scrum values are defined?</string>
+    <string name="scrum_meetings">Scrum Meetings</string>
+    <string name="question_5">How is the meeting called where the Scrum Team presents the completed work to the stakeholders?</string>
+    <string name="question_5_radio_button_1">Daily Scrum</string>
+    <string name="question_5_radio_button_2">Sprint Review</string>
+    <string name="question_5_radio_button_3">Sprint Retrospective</string>
+    <string name="backlog">Backlog</string>
+    <string name="question_6">Check each role who is the owner of the Sprint Backlog?</string>
+    <string name="question_6_checkbox_1">Product Owner</string>
+    <string name="question_6_checkbox_2">ScrumMaster</string>
+    <string name="question_6_checkbox_3">Scrum Team</string>
+    <string name="quiz_results_button_title">Quiz Results</string>
 </resources>
