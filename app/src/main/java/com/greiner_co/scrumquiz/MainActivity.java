@@ -3,7 +3,9 @@ package com.greiner_co.scrumquiz;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -24,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.greiner_co.scrumquiz.R.layout.activity_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setTitle(getResources().getString(R.string.scrum_quiz_title));
+        collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.collapsedappbar);
+        collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.expandedappbar);
 
         initializeVariables();
     }
