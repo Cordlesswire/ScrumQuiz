@@ -334,7 +334,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_half"
                         android:gravity="center_horizontal"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="@color/colorAccent" />
 
                     <SeekBar
                         android:id="@+id/seek_bar_1"
