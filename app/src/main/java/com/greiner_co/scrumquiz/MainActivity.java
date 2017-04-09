@@ -21,6 +21,15 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private boolean[] correctAnswers;
+    private CheckBox cb1;
+    private CheckBox cb2;
+    private CheckBox cb3;
+    private CheckBox cb4;
+    private CheckBox cb5;
+    private CheckBox cb6;
+    private CheckBox cb7;
+    private CheckBox cb8;
+    private CheckBox cb9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +52,26 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initializeVariables() {
         correctAnswers = new boolean[6];
-        TextView seekBar1TextView = (TextView) findViewById(com.greiner_co.scrumquiz.R.id.seek_bar_1_text_view);
+        TextView seekBar1TextView = (TextView) findViewById(R.id.seek_bar_1_text_view);
         seekBar1TextView.setText("0");
-        SeekBar seekBar1 = (SeekBar) findViewById(com.greiner_co.scrumquiz.R.id.seek_bar_1);
+        SeekBar seekBar1 = (SeekBar) findViewById(R.id.seek_bar_1);
         setSeekBarListener(seekBar1, seekBar1TextView);
-        EditText editTextView1 = (EditText) findViewById(com.greiner_co.scrumquiz.R.id.question_2_edit_text);
+        EditText editTextView1 = (EditText) findViewById(R.id.question_2_edit_text);
         enableKeyboardHidingOnEditText(editTextView1);
         setEditText1Listener(editTextView1);
-        final RadioGroup radioGroup1 = (RadioGroup) findViewById(com.greiner_co.scrumquiz.R.id.question_1_radio_group);
+        RadioGroup radioGroup1 = (RadioGroup) findViewById(R.id.question_1_radio_group);
         setRadioGroup1Listener(radioGroup1);
-        final RadioGroup radioGroup2 = (RadioGroup) findViewById(com.greiner_co.scrumquiz.R.id.question_5_radio_group);
+        RadioGroup radioGroup2 = (RadioGroup) findViewById(R.id.question_5_radio_group);
         setRadioGroup2Listener(radioGroup2);
+        cb1 = (CheckBox) findViewById(R.id.question_3_checkbox_1);
+        cb2 = (CheckBox) findViewById(R.id.question_3_checkbox_2);
+        cb3 = (CheckBox) findViewById(R.id.question_3_checkbox_3);
+        cb4 = (CheckBox) findViewById(R.id.question_3_checkbox_4);
+        cb5 = (CheckBox) findViewById(R.id.question_3_checkbox_5);
+        cb6 = (CheckBox) findViewById(R.id.question_3_checkbox_6);
+        cb7 = (CheckBox) findViewById(R.id.question_6_checkbox_1);
+        cb8 = (CheckBox) findViewById(R.id.question_6_checkbox_2);
+        cb9 = (CheckBox) findViewById(R.id.question_6_checkbox_3);
     }
 
     /**
@@ -214,34 +232,26 @@ public class MainActivity extends AppCompatActivity {
      * Verify the state of each contained checkbox to set the correct answers
      */
     private void checkRadioButtons() {
-        boolean cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8, cb9;
+        boolean cb1Value, cb2Value, cb3Vlaue, cb4Value, cb5Value, cb6Value, cb7Value, cb8Value, cb9Value;
 
         // Check answers for question 3
-        CheckBox cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_3_checkbox_1);
-        cb1 = cb.isChecked();
-        cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_3_checkbox_2);
-        cb2 = cb.isChecked();
-        cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_3_checkbox_3);
-        cb3 = cb.isChecked();
-        cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_3_checkbox_4);
-        cb4 = cb.isChecked();
-        cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_3_checkbox_5);
-        cb5 = cb.isChecked();
-        cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_3_checkbox_6);
-        cb6 = cb.isChecked();
+        cb1Value = cb1.isChecked();
+
+        cb2Value = cb2.isChecked();
+        cb3Vlaue = cb3.isChecked();
+        cb4Value = cb4.isChecked();
+        cb5Value = cb5.isChecked();
+        cb6Value = cb6.isChecked();
 
         // Only answers 2 + 3 + 5 are right
-        correctAnswers[2] = (cb2 && cb3 && cb5) && !(cb1 || cb4 || cb6);
+        correctAnswers[2] = (cb2Value && cb3Vlaue && cb5Value) && !(cb1Value || cb4Value || cb6Value);
 
         // Check answers for question 6
-        cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_6_checkbox_1);
-        cb7 = cb.isChecked();
-        cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_6_checkbox_2);
-        cb8 = cb.isChecked();
-        cb = (CheckBox) findViewById(com.greiner_co.scrumquiz.R.id.question_6_checkbox_3);
-        cb9 = cb.isChecked();
+        cb7Value = cb7.isChecked();
+        cb8Value = cb8.isChecked();
+        cb9Value = cb9.isChecked();
 
         // only answer 9 is right
-        correctAnswers[5] = cb9 && !(cb7 || cb8);
+        correctAnswers[5] = cb9Value && !(cb7Value || cb8Value);
     }
 }
