@@ -232,19 +232,19 @@ public class MainActivity extends AppCompatActivity {
      * Verify the state of each contained checkbox to set the correct answers
      */
     private void checkRadioButtons() {
-        boolean cb1Value, cb2Value, cb3Vlaue, cb4Value, cb5Value, cb6Value, cb7Value, cb8Value, cb9Value;
+        boolean cb1Value, cb2Value, cb3Value, cb4Value, cb5Value, cb6Value, cb7Value, cb8Value, cb9Value;
 
         // Check answers for question 3
         cb1Value = cb1.isChecked();
 
         cb2Value = cb2.isChecked();
-        cb3Vlaue = cb3.isChecked();
+        cb3Value = cb3.isChecked();
         cb4Value = cb4.isChecked();
         cb5Value = cb5.isChecked();
         cb6Value = cb6.isChecked();
 
         // Only answers 2 + 3 + 5 are right
-        correctAnswers[2] = (cb2Value && cb3Vlaue && cb5Value) && !(cb1Value || cb4Value || cb6Value);
+        correctAnswers[2] = (cb2Value && cb3Value && cb5Value) && !(cb1Value || cb4Value || cb6Value);
 
         // Check answers for question 6
         cb7Value = cb7.isChecked();
